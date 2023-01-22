@@ -11,7 +11,7 @@ import java.util.Collection;
 @Entity @Data @NoArgsConstructor @AllArgsConstructor
 public class appUser {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
     private String name;
     private String username;
     private String password;
