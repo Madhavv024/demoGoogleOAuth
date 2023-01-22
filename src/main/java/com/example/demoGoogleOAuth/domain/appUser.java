@@ -11,11 +11,18 @@ import java.util.Collection;
 @Entity @Data @NoArgsConstructor @AllArgsConstructor
 public class appUser {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
     private String name;
     private String username;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
+
+    public appUser(String name, String username, String password, Collection<Role> roles) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
 
 }

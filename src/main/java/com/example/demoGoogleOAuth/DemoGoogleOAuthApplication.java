@@ -20,15 +20,16 @@ public class DemoGoogleOAuthApplication {
 	@Bean
 	CommandLineRunner run(userService userService){
 		return args -> {
-			userService.saveRole(new Role(null, "Role_User"));
-			userService.saveRole(new Role(null, "Role_Manager"));
-			userService.saveRole(new Role(null, "Role_Admin"));
-			userService.saveRole(new Role(null, "Role_Super_Admin"));
+			userService.saveRole(new Role(1, "Role_User"));
+			userService.saveRole(new Role(2, "Role_Manager"));
+			userService.saveRole(new Role(3, "Role_Admin"));
+			userService.saveRole(new Role(4, "Role_Super_Admin"));
 
-			userService.saveUser(new appUser(null , "John Travolta" , "John" , "1234" , new ArrayList<>()));
-			userService.saveUser(new appUser(null , "Madhavv Tthukral" , "Madhavv" , "1234" , new ArrayList<>()));
-			userService.saveUser(new appUser(null , "Ishikaa Gupta" , "Ishu" , "1234" , new ArrayList<>()));
-			userService.saveUser(new appUser(null , "Will Smit" , "Will" , "1234" , new ArrayList<>()));
+			userService.saveUser(new appUser( "John Travolta" , "John" , "1234" , new ArrayList<>()));
+			userService.saveUser(new appUser( "Madhavv Tthukral" , "Madhavv" , "1234" , new ArrayList<>()));
+			userService.saveUser(new appUser( "Ishikaa Gupta" , "Ishu" , "1234" , new ArrayList<>()));
+			userService.saveUser(new appUser( "Will Smit" , "Will" , "1234" , new ArrayList<>()));
+
 
 			userService.addRoleToUser("John" , "Role_User");
 			userService.addRoleToUser("Will" , "Role_Manager");
