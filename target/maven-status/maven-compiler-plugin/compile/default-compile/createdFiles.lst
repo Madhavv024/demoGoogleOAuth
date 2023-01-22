@@ -1,9 +1,0 @@
-com/example/demoGoogleOAuth/domain/Role.class
-com/example/demoGoogleOAuth/api/RoleToUserForm.class
-com/example/demoGoogleOAuth/service/userService.class
-com/example/demoGoogleOAuth/api/UserResource.class
-com/example/demoGoogleOAuth/service/appUserServiceImpl.class
-com/example/demoGoogleOAuth/domain/appUser.class
-com/example/demoGoogleOAuth/repo/roleRepo.class
-com/example/demoGoogleOAuth/repo/userRepo.class
-com/example/demoGoogleOAuth/DemoGoogleOAuthApplication.class
